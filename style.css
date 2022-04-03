@@ -9,6 +9,46 @@
 /* Debug */
 /* Responsive */
 
+/* Import du google font police */
+/* Methode 1 (à éviter) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/* Methode 2 (à privilégié) */
+@font-face {
+    /* on nomme notre police au cas ou on veut changer dans le futur il suffira de le faire seulement ici */
+    font-family: "font-1";
+    /* source de la police */
+    src: url(./assets/NotoSans-Medium.ttf)
+}
+
+body {
+    font-family: "font-1", sans-sherif;
+}
+
+/* Selectionne tous les h1 (normalement un par page HTML) */
 h1 {
+    /* Transforme le texte en majuscule */
     text-transform: uppercase;
+    /* Espace entre les lettres */
+    letter-spacing: 2px;
+    /* Taille de la police TOUOURS en rem (1 rem = 16px) */
+    font-size:2.5rem;
+    /* Couleur du texte */
+    /* rgba : un parametre en plus l'ombre du texte */
+    color: rgb(0, 0, 139);
+    /* Ombre texte: axe x, axe y, flou,couleur */
+    /* A réaliser avec l'inspecteur sur google */
+    text-shadow: 5px 3px 0 #85dadab6;
+    /* text-align permet d'aligner le texte a droite a gauche au centre justify */
+    text-align: center;
+    /* Utilisation de la police importé au début du fichier */
+    /* deuxieme police : au cas ou la police Parisienne n'est pas connu */
+    /* Balise plus précise donc le h1 prend cette nouvelle police et non celle du body */
+    font-family: 'Playfair Display', serif;
+}
+
+/* Application précise -> recherche google */
+/* ici permet de changer la premiere lettre de la basile html sélectionner */
+h1::first-letter {
+    color: red;
 }
