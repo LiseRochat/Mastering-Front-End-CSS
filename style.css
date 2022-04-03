@@ -29,7 +29,7 @@ body {
     /* Hauteur : 100% de l'écran de l'utilisateur */
     height: 100vh;
     /* Suprime les marges et donc le scroll */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* Selectionne tous les h1 (normalement un par page HTML) */
@@ -58,4 +58,16 @@ h1 {
 /* ici permet de changer la premiere lettre de la basile html sélectionner */
 h1::first-letter {
     color: red;
+}
+
+main {
+    background: whitesmoke;
+    /* Très Bonne pratique : largeur en 85% */
+    width: 85%;
+    min-height: 500px;
+    /* Centrer sur la page haut droite bas gauche */
+    /* Send des aiguilles d'une montre en commencant a midi */
+    /* 2 valeurs : haut/bas gauche/droite */
+    /* auto : même valeurs a gauche et à droite */
+    margin: 0 auto;
 }
