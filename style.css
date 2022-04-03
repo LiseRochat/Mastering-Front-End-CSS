@@ -87,7 +87,8 @@ main {
 
 /* Selectionne la classe="positioning */
 .positioning, 
-.flexbox {
+.flexbox,
+.grid {
     border: 2px solid skyblue;
     padding: 10px;
     margin-top: 20px;
@@ -158,4 +159,63 @@ li {
 
 .grid-container > img {
     height: 200px;
+}
+
+/********************************** Grid ***********************************/
+
+/* Possede deux enfants */
+.grid-container {
+    display: grid;
+    /* Détermine la taille accordé aux enfants */
+    grid-template-columns: 30% 70%;
+}
+
+form {
+    display:grid;
+    /* On dessine un grid */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+            "i1 i2"
+            "ta ta"
+            "bt bt";
+}
+
+input,
+textarea {
+    margin: 5px;
+    height: 45px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: "font-1";
+}
+
+/* On attribut chaque élément a nos balise html */
+#fristname {
+    grid-area: i1;
+}
+
+#surname {
+    grid-area: i2;
+}
+
+textarea {
+    grid-area: ta;
+    /* Empecher le redimenssionnement de la text area */
+    resize: none;
+}
+
+input[type="submit"] {
+    grid-area: bt;
+    /* Montrer que le bouton est cliquable */
+    cursor: pointer;
+    background: cyan;
+    transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+    background: darkblue;
+    color: white;
 }
