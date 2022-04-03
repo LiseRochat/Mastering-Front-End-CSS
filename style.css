@@ -27,7 +27,7 @@ body {
     /* center/cover left/right : comment on positionne l'image  */
     background: url(./assets/bg.jpg) no-repeat fixed center/cover;
     /* Hauteur : 100% de l'écran de l'utilisateur */
-    height: 100vh;
+    /* height: 100vh; */
     /* Suprime les marges et donc le scroll */
     /* overflow: hidden; */
 }
@@ -63,11 +63,18 @@ h1::first-letter {
 main {
     background: whitesmoke;
     /* Très Bonne pratique : largeur en 85% */
-    width: 85%;
+    width: 90%;
     min-height: 500px;
     /* Centrer sur la page haut droite bas gauche */
     /* Send des aiguilles d'une montre en commencant a midi */
     /* 2 valeurs : haut/bas gauche/droite */
     /* auto : même valeurs a gauche et à droite */
-    margin: 0 auto;
+    margin: 10px auto;
+    /* marge intérieur */
+    padding: 15px;
+    /* Arrondir les bors */
+    border-radius: 15px;
+    /* Ombre */
+    /* Bonne pratique : intensité -> 0.25 */
+    box-shadow: 1px 2px 12px 5px rgba(0, 0, 0, 0.269);
 }
