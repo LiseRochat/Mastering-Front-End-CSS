@@ -23,6 +23,13 @@
 
 body {
     font-family: "font-1", sans-sherif;
+    /* La propriété background regroupe plusieurs propriétées */
+    /* center/cover left/right : comment on positionne l'image  */
+    background: url(./assets/bg.jpg) no-repeat fixed center/cover;
+    /* Hauteur : 100% de l'écran de l'utilisateur */
+    height: 100vh;
+    /* Suprime les marges et donc le scroll */
+    overflow: hidden;
 }
 
 /* Selectionne tous les h1 (normalement un par page HTML) */
