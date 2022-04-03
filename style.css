@@ -86,11 +86,16 @@ main {
 }
 
 /* Selectionne la classe="positioning */
-.positioning {
+.positioning, 
+.flexbox {
     border: 2px solid skyblue;
     padding: 10px;
     margin-top: 20px;
     border-radius: 10px;
+    
+}
+/********************************** Positioning ***********************************/
+.positioning {
     position: relative;
 }
 
@@ -126,4 +131,27 @@ h2 {
     left: 50%;
     /* Permet de centrer l'élément sur l'axe des x en lui disant tu revient de 50 a gauche de ta largeur */
     transform: translateX(-50%);
+}
+
+/********************************** Flexbox ***********************************/
+ul {
+    display: flex;
+    /* Positionnement des enfants */
+    justify-content: space-around;
+    /* Supression du padding de base */
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    font-size: 0.7rem;
+    /* Creation de box */
+    height: 160px;
+    width: 160px;
+    background: turquoise;
+    display: flex;
+    /* Centrer les éléments verticalement */
+    align-items: center;
+    /* Centrer les éléments horizontalement */
+    justify-content: center;
 }
