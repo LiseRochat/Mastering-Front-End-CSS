@@ -9,11 +9,11 @@
 /* Debug */
 /* Responsive */
 
-/* Import du google font police */
+/* Import d'une google font */
 /* Methode 1 (à éviter) */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
-/* Methode 2 (à privilégié) */
+/* Methode 2 (à privilégier) */
 @font-face {
     /* on nomme notre police au cas ou on veut changer dans le futur il suffira de le faire seulement ici */
     font-family: "font-1";
@@ -157,8 +157,12 @@ li {
     justify-content: center;
 }
 
-.grid-container > img {
+img {
     height: 200px;
+}
+
+a:hover {
+    color: blue;
 }
 
 /********************************** Grid ***********************************/
@@ -168,6 +172,10 @@ li {
     display: grid;
     /* Détermine la taille accordé aux enfants */
     grid-template-columns: 30% 70%;
+}
+
+.img {
+    text-align: center;
 }
 
 form {
@@ -218,4 +226,43 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: darkblue;
     color: white;
+}
+
+/********************************** Responsive ***********************************/
+/* ATTENTION un espace entre AND et ( */
+@media screen and (max-width: 1000px) {
+    .grid-container {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    form {
+        display:grid;
+        /* On dessine un grid */
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+                "i1"
+                "i2"
+                "ta"
+                "bt";
+    }
+}
+
+@media screen and (max-width: 590px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #circle{
+        right: 1px;
+    }
 }
